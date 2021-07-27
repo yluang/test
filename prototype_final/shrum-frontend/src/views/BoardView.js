@@ -64,10 +64,10 @@ function BoardView() {
         title: 'To Do',
         cards:[],
         cards: [
-          {id: 'Card1', title: 'Assignment 1', description: 'Deadline: Sunday, May 2nd.',assignee: 'None', priority:'low ❗', reviewer: 'None', label: '3 Points', draggable: true},
-          {id: 'Card2', title: 'Assignment 2', description: 'Deadline: Sunday, May 16th.', assignee: 'None', priority:'low ❗', reviewer: 'None',  label: '5 Points', metadata: {sha: 'be312a1'}},
-          {id: 'Card3', title: 'Assignment 3', description: 'Deadline: Sunday, July 25th.', assignee: 'None', priority:'high ❗❗', reviewer: 'None', label: '8 Points', metadata: {sha: 'be312a1'}},
-          {id: 'Card4', title: 'Final Exam', description: 'Deadline: Friday, Augusr 6th.',  assignee: 'None', priority:'high ❗❗', reviewer: 'None', label: '8 Points', metadata: {sha: 'be312a1'}}
+          {id: 'Card1', title: 'Assignment 1', description: 'Deadline: Sunday, May 2nd.',assignee: 'None', priority:'low ❗', reviewer: 'None', label: '3', draggable: true},
+          {id: 'Card2', title: 'Assignment 2', description: 'Deadline: Sunday, May 16th.', assignee: 'None', priority:'low ❗', reviewer: 'None',  label: '5 ', metadata: {sha: 'be312a1'}},
+          {id: 'Card3', title: 'Assignment 3', description: 'Deadline: Sunday, July 25th.', assignee: 'None', priority:'high ❗❗', reviewer: 'None', label: '8 ', metadata: {sha: 'be312a1'}},
+          {id: 'Card4', title: 'Final Exam', description: 'Deadline: Friday, Augusr 6th.',  assignee: 'None', priority:'high ❗❗', reviewer: 'None', label: '8 ', metadata: {sha: 'be312a1'}}
         ]
       },
       {
@@ -111,7 +111,7 @@ function BoardView() {
                      }}
                     cardDraggable
                     draggable
-                    data={JSON.parse(localStorage.getItem('data'))  || data }   
+                    data={JSON.parse(localStorage.getItem('data'))  || data }  
                     collapsibleLanes
                     //components={{NewCardForm: NewCardForm}} 
                          />
