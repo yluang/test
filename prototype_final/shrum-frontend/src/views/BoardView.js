@@ -107,13 +107,17 @@ function BoardView() {
     return (
       <Board style = {{backgroundColor: 'grey'}}
       editable
-       onDataChange={(newData) => {console.log(newData)}}
+       onDataChange={(newData) => {localStorage.setItem('data', JSON.stringify(newData));
+          retrievedObject = localStorage.getItem('data');
+          console.log("data changed",JSON.parse(retrievedObject))
+      }}
        onCardAdd={(card) => {localStorage.setItem('data', JSON.stringify(card));
-                         var retrievedObject = localStorage.getItem('data');
-                         console.log(retrievedObject)}}
+                          retrievedObject = localStorage.getItem('data');
+                         console.log("new card: ", retrievedObject)}}
                          cardDraggable
                          draggable
                          data={JSON.parse(retrievedObject)}
+                         
                          collapsibleLanes
                          //components={{NewCardForm: NewCardForm}} 
                          />
